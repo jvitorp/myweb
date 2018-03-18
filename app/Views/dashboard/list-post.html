@@ -1,0 +1,55 @@
+<div class="header">
+    <h2><strong>Gerenciador de Post</strong> </h2>
+    <div class="breadcrumb-wrapper">
+        <ol class="breadcrumb">
+
+            <li >Home</li>
+            <li class="active">Post</li>
+        </ol>
+    </div>
+
+
+
+
+</div>
+
+<div class="row">
+    <div class="col-md-12 ">
+        <div class="panel">
+            <div class="panel-header ">
+                <h3> <a href="post/new/" class="btn btn-success"><i class="icon-note"></i>Adicionar</a></h3>
+
+
+            </div>
+
+            <div class="panel-content">
+
+                <table class="table table-hover dataTable" id="table-editable">
+                    <thead>
+                    <tr>
+                        <th>id</th>
+                        <th >Titulo</th>
+                        <th>Data</th>
+                        <th>Autor</th>
+                        <th class="text-right">Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {loop="$getpost" as $post}
+                    <tr>
+                        <td>{$post.post_id}</td>
+                        <td>{$post.post_title}</td>
+                        <td><small>{$post.post_date}</small></td>
+                        <td>{$post.post_autor}</td>
+                        <td class="text-right"><a class="edit btn btn-sm btn-default" href="post/edit/{$post.post_id}"><i class="icon-note"></i></a>  <a class="delete btn btn-sm btn-danger" href="javascript:;"><i class="icons-office-52"></i></a>
+                        </td>
+                    </tr>
+                    {/loop}
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>

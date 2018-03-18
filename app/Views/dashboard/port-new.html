@@ -1,0 +1,96 @@
+<div class="header">
+    <h2><strong>Adicionar novo Post</strong> </h2>
+    <div class="breadcrumb-wrapper">
+        <ol class="breadcrumb">
+            <li><a href="{#URL#}dashboard">Home</a></li>
+            <li><a href="{#URL#}dashboard/post">Post</a></li>
+            <li class="active">Adicionar</li>
+        </ol>
+    </div>
+
+
+</div>
+
+<div class="row">
+    <div class="col-md-12 ">
+        <div class="panel">
+            <div class="panel-header">
+                <h3><i class="icon-note"></i> <strong>Summernote</strong> Editor</h3>
+            </div>
+            <div class="panel-content">
+                <form action="/file-upload" class="dropzone">
+                    <div class="fallback">
+                        <input name="file" type="file" multiple />
+                    </div>
+                </form>
+
+                <form action="" id="form-add-port" class="dropzone" enctype="multipart/form-data">
+
+                    <div class="fallback">
+                        <input name="file" type="file" multiple />
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <!-- -->
+                            <div class="form-group">
+                                <label>Titulo da postagem</label>
+                                <input type="text" name="titulo" class="form-control form-white" placeholder="Titulo" minlength="5" required="" aria-required="true">
+                            </div>
+                            <div class="form-group">
+
+                                    <div id="dropzone" class="fallback">
+                                        <input name="file" type="file" multiple />
+                                    </div>
+
+                            </div>
+                            <h3>Conteudo <strong>Editor</strong></h3>
+                            <textarea name="text" id="editor1" rows="10" cols="80">
+
+                            </textarea>
+                            <!-- -->
+                            <hr>
+                            <!-- -->
+                            <button type="reset" class="btn btn-default" >Cancelar</button>
+                            <button type="submit" class="btn btn-success form-add" >Adicionar</button>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>SEO</label>
+                                <div>
+                                    <input name="desc" class="form-control form-white" value="Descrição para SEO">
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <label>Visibilidade</label>
+                                <div class="icheck-list">
+                                    <label>
+                                        <input type="radio" name="show" data-radio="iradio_minimal-blue" value="1"> Public</label>
+                                    <label><input type="radio" name="show" checked data-radio="iradio_minimal-blue" value="0">Invisivel para visitantes</label>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label class="form-label">Data</label>
+                                <div class="prepend-icon">
+                                    <input type="text" name="datetimepicker" class="datetimepicker form-control form-white" placeholder="Choose a date..." value=" {function="date('Y-m-d h:i:s')"}">
+                                    <i class="icon-clock"></i>
+                                </div>
+                            </div>
+
+                            <div class="progress" style="display:none;">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;max-width:100%;">
+                                    <span class="sr-only">0% Complete (success)</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>

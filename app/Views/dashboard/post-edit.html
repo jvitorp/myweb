@@ -1,0 +1,145 @@
+<div class="header">
+    <h2><strong>Adicionar novo Post</strong> </h2>
+    <div class="breadcrumb-wrapper">
+        <ol class="breadcrumb">
+            <li><a href="{#URL#}dashboard">Home</a></li>
+            <li><a href="{#URL#}dashboard/post">Post</a></li>
+            <li class="active">Adicionar</li>
+        </ol>
+    </div>
+
+
+</div>
+
+<div class="row">
+    <div class="col-md-12 ">
+        <div class="panel">
+            <div class="panel-header">
+                <h3><i class="icon-note"></i> <strong>Editando o post</strong> {$post->post_title}</h3>
+            </div>
+            <div class="panel-content">
+                <form action="" id="form-add-post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <!-- -->
+                            <div class="form-group">
+                                <label>Titulo da postagem</label>
+                                <input type="text" name="titulo" class="form-control form-white" placeholder="Titulo" minlength="5" required="" aria-required="true" value="{$post->post_title}">
+                            </div>
+                            <h3>Conteudo <strong>Editor</strong></h3>
+                            <textarea name="text" id="editor1" rows="10" cols="80" value="{$post->post_content}">
+                                This is my textarea to be replaced with CKEditor.
+                            </textarea>
+                            <!-- -->
+                            <hr>
+                            <!-- -->
+                            <button type="reset" class="btn btn-default" >Cancelar</button>
+                            <button type="submit" class="btn btn-success form-add" >Salvar</button>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Tags Input</label>
+                                <div>
+                                    <input name="tags" class="select-tags form-control form-white" value="{$post->post_tags}">
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                                <label>Selecione a categoria</label>
+                                <select class="form-control" style="width:100%;" name="cat" value="">
+
+                                    <option value="{$post->post_category}" >{$post->post_category}</option>
+
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label>Visibilidade</label>
+                                <div class="icheck-list">
+                                    <label>
+
+                                        <input type="radio" name="show" data-radio="iradio_minimal-blue" value="1"> Public</label>
+                                    <label><input type="radio" name="show" checked data-radio="iradio_minimal-blue" value="0">Invisivel para visitantes</label>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label class="form-label">Data</label>
+                                <div class="prepend-icon">
+                                    <input type="text" name="datetimepicker" class="datetimepicker form-control form-white" placeholder="Choose a date..." value=" {$post->post_date}"}">
+                                    <i class="icon-clock"></i>
+                                </div>
+                            </div>
+                            <div class="fileinput fileinput-new" data-provides="fileinput">
+                                <p><strong>Thumbmail</strong></p>
+                                <div class="fileinput-new thumbnail">
+                                    <img data-src="" width="50px" src="{#URL#}{$post->post_thumb}" class="img-responsive" alt="gallery 3">
+                                </div>
+                                <div class="fileinput-preview fileinput-exists thumbnail"></div>
+
+                                <div>
+                            <span class="btn btn-default btn-file"><span class="fileinput-new">Trocar</span><span class="fileinput-exists">Change</span>
+                            <input type="file" name="thumb">
+                            </span>
+                                    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                </div>
+                            </div>
+                            <div class="progress" style="display:none;">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;max-width:100%;">
+                                    <span class="sr-only">0% Complete (success)</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- BEGIN MODAL DATE & TIME PICKER -->
+<div class="modal fade" id="modal-timepicker" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icons-office-52"></i></button>
+                <h4 class="modal-title"><strong>Date &amp; Timepicker </strong> inside modal</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label">Time Picker</label>
+                            <div class="prepend-icon">
+                                <input type="text" name="timepicker" class="timepicker form-control" placeholder="Choose a time...">
+                                <i class="icon-clock"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label">Data</label>
+                            <div class="prepend-icon">
+                                <input type="text" name="datetimepicker" class="datetimepicker form-control" placeholder="Insira a data">
+                                <i class="icon-clock"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer bg-gray-light">
+                <button type="button" class="btn btn-default btn-embossed" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary btn-embossed" data-dismiss="modal">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- END MODAL DATE & TIME PICKER -->
+
+
+

@@ -1,0 +1,212 @@
+<body class="fixed-topbar fixed-sidebar theme-sdtl color-default dashboard">
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<section>
+    <!-- BEGIN SIDEBAR -->
+    <div class="sidebar">
+        <div class="logopanel">
+            <h1>
+                <a href="{#URL#}dashboard"></a>
+            </h1>
+        </div>
+        <div class="sidebar-inner">
+            <div class="sidebar-top">
+                <form action="search-result.html" method="post" class="searchform" id="search-results">
+                    <input type="text" class="form-control" name="keyword" placeholder="Search...">
+                </form>
+                <div class="userlogged clearfix">
+                    <i class="icon icons-faces-users-01"></i>
+                    <div class="user-details">
+                        <h4><strong>{$name}</strong></h4>
+                        <div class="dropdown user-login">
+                            <button class="btn btn-xs dropdown-toggle btn-rounded" type="button" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" data-delay="300">
+                                <i class="online"></i><span>
+
+                                {if="$cargo==3"}
+                                    Administrador
+                                {elseif="$cargo==2"}
+                                     Funcionário
+                                {else}
+                                    Cliente
+                                {/if}
+                            </span><i class="fa fa-angle-down"></i>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-title">
+                Menu
+
+            </div>
+            <ul class="nav nav-sidebar">
+                <li class=" nav-active active"><a href="{#URL#}dashboard"><i class="icon-home"></i><span>Dashboard</span></a></li>
+                <li class="nav-parent">
+                    <a href="#"><i class="icon-puzzle"></i><span>Post</span> <span class="fa arrow"></span></a>
+                    <ul class="children collapse">
+                        <li><a href="{#URL#}dashboard/post/new">Adicionar</a></li>
+                        <li><a href="{#URL#}dashboard/post">Gerenciar</a></li>
+                    </ul>
+                </li>
+                <li class="nav-parent">
+                    <a href="#"><i class="icon-bulb"></i><span>Pages</span> <span class="fa arrow"></span></a>
+                    <ul class="children collapse">
+                        <li><a href="{#URL#}dashboard/pages/new">Adicionar</a></li>
+                        <li><a href="{#URL#}dashboard/pages">Gerenciar</a></li>
+                    </ul>
+                </li>
+                <li class="nav-parent">
+                    <a href="#"><i class="icon-tag"></i><span>Categorias</span> <span class="fa arrow"></span></a>
+                    <ul class="children collapse">
+                        <li><a href="{#URL#}dashboard/category/new">Adicionar</a></li>
+                        <li><a href="{#URL#}dashboard/category/">Gerenciar</a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-parent">
+                    <a href="#"><i class="icon-layers"></i><span>Portfolio</span> <span class="fa arrow"></span></a>
+                    <ul class="children collapse">
+                        <li><a href="{#URL#}dashboard/portfolio/new">Adicionar</a></li>
+                        <li><a href="{#URL#}dashboard/portfolio/">Gerenciar</a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-parent">
+                    <a href="#"><i class="icon-user"></i><span>Usuários</span> <span class="fa arrow"></span></a>
+                    <ul class="children collapse">
+                        <li><a href="{#URL#}dashboard/user/new">Adicionar</a></li>
+                        <li><a href="{#URL#}dashboard/user/">Gerenciar</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            <!-- SIDEBAR WIDGET FOLDERS -->
+            <div class="sidebar-widgets">
+                <p class="menu-title widget-title">Folders <span class="pull-right"><a href="#" class="new-folder"> <i class="icon-plus"></i></a></span></p>
+                <ul class="folders">
+                    <li>
+                        <a href="#"><i class="icon-doc c-primary"></i>My documents</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-picture"></i>My images</a>
+                    </li>
+                    <li><a href="#"><i class="icon-lock"></i>Secure data</a>
+                    </li>
+                    <li class="add-folder">
+                        <input type="text" placeholder="Folder's name..." class="form-control input-sm">
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-footer clearfix">
+                <a class="pull-left footer-settings" href="#" data-rel="tooltip" data-placement="top" data-original-title="Settings">
+                    <i class="icon-settings"></i></a>
+                <a class="pull-left toggle_fullscreen" href="#" data-rel="tooltip" data-placement="top" data-original-title="Fullscreen">
+                    <i class="icon-size-fullscreen"></i></a>
+                <a class="pull-left" href="user-lockscreen.html" data-rel="tooltip" data-placement="top" data-original-title="Lockscreen">
+                    <i class="icon-lock"></i></a>
+                <a class="pull-left btn-effect" href="{#URL#}dashboard/logout" data-modal="modal-1" data-rel="tooltip" data-placement="top" data-original-title="Logout">
+                    <i class="icon-power"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- END SIDEBAR -->
+    <div class="main-content">
+        <!-- BEGIN TOPBAR -->
+        <div class="topbar">
+            <div class="header-left">
+                <div class="topnav">
+                    <a class="menutoggle" href="#" data-toggle="sidebar-collapsed"><span class="menu__handle"><span>Menu</span></span></a>
+                    <ul class="nav nav-icons">
+                        <li><a href="#" class="toggle-sidebar-top"><span class="icon-user-following"></span></a></li>
+                        <li><a href="mailbox.html"><span class="octicon octicon-mail-read"></span></a></li>
+                        <li><a href="#"><span class="octicon octicon-flame"></span></a></li>
+                        <li><a href="builder-page.html"><span class="octicon octicon-rocket"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header-right">
+                <ul class="header-menu nav navbar-nav">
+                    <!-- BEGIN USER DROPDOWN -->
+                    <li class="dropdown" id="language-header">
+                        <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                            <i class="icon-globe"></i>
+                            <span>Language</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#" data-lang="en"><img src="{#URL#}assets/global/images/flags/usa.png" alt="flag-english"> <span>English</span></a>
+                            </li>
+                            <li>
+                                <a href="#" data-lang="es"><img src="{#URL#}assets/global/images/flags/spanish.png" alt="flag-english"> <span>Español</span></a>
+                            </li>
+                            <li>
+                                <a href="#" data-lang="fr"><img src="{#URL#}assets/global/images/flags/french.png" alt="flag-english"> <span>Français</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- END USER DROPDOWN -->
+                    <!-- BEGIN NOTIFICATION DROPDOWN -->
+                    <li class="dropdown" id="notifications-header">
+                        <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                            <i class="icon-bell"></i>
+                            <span class="badge badge-danger badge-header">6</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header clearfix">
+                                <p class="pull-left">12 Pending Notifications</p>
+                            </li>
+                            <li>
+                                <ul class="dropdown-menu-list withScroll" data-height="220">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-star p-r-10 f-18 c-orange"></i>
+                                            Steve have rated your photo
+                                            <span class="dropdown-time">Just now</span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li class="dropdown-footer clearfix">
+                                <a href="#" class="pull-left">See all notifications</a>
+                                <a href="#" class="pull-right">
+                                    <i class="icon-settings"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- END NOTIFICATION DROPDOWN -->
+                    <!-- BEGIN MESSAGES DROPDOWN -->
+
+                    <!-- END MESSAGES DROPDOWN -->
+                    <!-- BEGIN USER DROPDOWN -->
+                    <li class="dropdown" id="user-header">
+                        <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                            <img src="{#URL#}assets/global/images/avatars/user1.png" alt="user image">
+                            <span class="username">Olá, {$name}</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#"><i class="icon-user"></i><span>My Profile</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="icon-calendar"></i><span>My Calendar</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="icon-settings"></i><span>Account Settings</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="{#URL#}dashboard/logout"></i><span>Logout</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- END USER DROPDOWN -->
+                    <!-- CHAT BAR ICON -->
+                    <li id="quickview-toggle"><a href="#"><i class="icon-bubbles"></i></a></li>
+                </ul>
+            </div>
+            <!-- header-right -->
+        </div>
+  <!-- END TOPBAR -->
