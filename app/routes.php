@@ -208,5 +208,12 @@ Router::route('/dashboard/ajax/category/*', function() {
 
     echo json_encode($json);
 });
+Router::route('/nav/*', function() {
+
+
+
+
+
+});
 Router::execute($_SERVER['REQUEST_URI']);
 

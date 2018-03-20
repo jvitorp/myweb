@@ -8,6 +8,7 @@
 
 namespace Core;
 
+use Core\DbCreate;
 
 class Session
 {
@@ -49,6 +50,27 @@ class Session
             $_SESSION = array();
         }
 
+    }
+
+    public static function setVisit()
+    {
+        if(self::getSession("visitante")){
+            self::setSession("visitante",
+                array(
+                    "ip" => $_SERVER['REMOTE_ADDR'],
+                    "date" => date("Y-m-d h:i:s")
+                ));
+            $query = "UPDATE cms_visit SET visit_date = ?,visit_page = visit_page +1,visit_path = ? WHERE visit_ip = ?";
+            DbCreate::Create($query,array(date("Y-m-d h:i:s"),strip_tags(trim($_SERVER["REQUEST_URI"])),$_SERVER['REMOTE_ADDR']));
+        }else{
+            self::setSession("visitante",
+                array(
+                    "ip" => $_SERVER['REMOTE_ADDR'],
+                    "date" => date("Y-m-d h:i:s")
+                ));
+            $query = "INSERT INTO cms_visit (visit_ip,visit_date,visit_browser) VALUES(?,?,?)";
+            DbCreate::Create($query,array($_SERVER['REMOTE_ADDR'],date("Y-m-d h:i:s"),$_SERVER['HTTP_USER_AGENT']));
+        }
     }
 
 
