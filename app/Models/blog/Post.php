@@ -18,11 +18,19 @@ class Post extends View
     public static function getPost($id)
     {
 
-        $getPost = DBread::SimpleRead("SELECT post_id,post_title,post_content,post_autor,post_date,post_thumb FROM cms_posts WHERE post_id = ?",array($id));
+       $getPost = DBread::SimpleRead("SELECT post_id,post_title,post_content,post_autor,post_date,post_thumb FROM cms_posts WHERE post_id = ?",array($id));
+       if( DbRead::getCount() > 0)
+       {
         parent::newAssign("title","{$getPost->post_title} - Blog João Vitor P. - Sobre Desenvolvimento Web");
         parent::newAssign("post",$getPost);
         parent::newAssign("content","post-view");
         parent::setDisplay("content");
+       }else{
+           parent::newAssign("title","404 - Post não encontrado - Blog João Vitor P. - Sobre Desenvolvimento Web");
+           parent::newAssign("post",$getPost);
+           parent::newAssign("content","post-view");
+           parent::setDisplay("content");
+       }
 
     }
 }

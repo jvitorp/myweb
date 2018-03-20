@@ -1,4 +1,6 @@
 <!-- Two -->
+
+{if="$post"}
 <section id="two">
     <h2>{$post->post_title}</h2>
 
@@ -18,3 +20,15 @@
 
 
 </section>
+
+{else}
+<section id="two">
+    <h2><strong>404 - </strong> Post não encontrado!</h2>
+
+
+
+
+
+</section>
+
+{/if}

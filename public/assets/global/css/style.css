@@ -13242,3 +13242,10 @@ select:focus,
 .thumbnail img{
   width:100px;
 }
+.imageThumb {
+  width:100px;
+  padding:10px;
+  margin-top:5px;
+  border:solid 1px #e7e7e7;
+}
+

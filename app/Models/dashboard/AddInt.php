@@ -12,7 +12,7 @@ namespace App\Models\dashboard;
 interface AddInt
 {
 
-    public static function addNew();
+    public static function addNew($post);
 
     public static function listAll();
 

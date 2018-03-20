@@ -15,34 +15,30 @@
     <div class="col-md-12 ">
         <div class="panel">
             <div class="panel-header">
-                <h3><i class="icon-note"></i> <strong>Summernote</strong> Editor</h3>
+                <h3><i class="icon-note"></i> <strong>Portfólio</strong> Editor</h3>
             </div>
             <div class="panel-content">
-                <form action="/file-upload" class="dropzone">
-                    <div class="fallback">
-                        <input name="file" type="file" multiple />
-                    </div>
-                </form>
+
 
                 <form action="" id="form-add-port" class="dropzone" enctype="multipart/form-data">
 
-                    <div class="fallback">
-                        <input name="file" type="file" multiple />
-                    </div>
+
                     <div class="row">
                         <div class="col-md-8">
                             <!-- -->
                             <div class="form-group">
+
+                                <div id="dropzone" class="fallback">
+                                    <label>Portfólio Galeria</label>
+                                    <input class="form-control " name="file" id="files" type="file" multiple />
+                                </div>
+
+                            </div>
+                            <div class="form-group">
                                 <label>Titulo da postagem</label>
                                 <input type="text" name="titulo" class="form-control form-white" placeholder="Titulo" minlength="5" required="" aria-required="true">
                             </div>
-                            <div class="form-group">
 
-                                    <div id="dropzone" class="fallback">
-                                        <input name="file" type="file" multiple />
-                                    </div>
-
-                            </div>
                             <h3>Conteudo <strong>Editor</strong></h3>
                             <textarea name="text" id="editor1" rows="10" cols="80">
 

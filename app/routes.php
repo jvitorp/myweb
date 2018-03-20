@@ -46,18 +46,7 @@ Router::route('/auth', function() {
     $controller->Auth();
 });
 
-Router::route('/ajax/auth*', function() {
-    $login = new Login($_POST['username'],$_POST['password']);
-    if($login->setLogin())
-    {
-        $json = ['success' => 'Logado com sucesso'];
-    }
-    else{
-        $json = ['error' => 'E-mail ou senha incorretos'];
-    }
-    sleep(1);
-    echo json_encode($json);
-});
+
 
 Router::route('/dashboard/logout*', function() {
     $controller = \Core\Controller::getAdminController("HomeController");
@@ -113,7 +102,7 @@ Router::route('/dashboard/pages/edit(?:/([^/]+))', function($id = 0) {
 
 
 Router::route('/dashboard/category/*', function() {
-    $controller = \Core\Controller::getAdminController("PostController");
+    $controller = \Core\Controller::getAdminController("CatController");
     $controller->ListAll();
 });
 Router::route('/dashboard/category/new/*', function() {
@@ -126,18 +115,18 @@ Router::route('/dashboard/category/edit(?:/([^/]+))', function($id = 0) {
     $controller->editPost($id);
 });
 
-Router::route('/dashboard/portfolio/*', function() {
-    $controller = \Core\Controller::getAdminController("PostController");
-    $controller->ListAll();
-});
-Router::route('/dashboard/portfolio/new/*', function() {
-    $controller = \Core\Controller::getAdminController("PortfolioController");
-    $controller->addNew();
-});
-Router::route('/dashboard/portfolio/edit(?:/([^/]+))', function($id = 0) {
-    $controller = \Core\Controller::getAdminController("PostController");
-    $controller->editPost($id);
-});
+//Router::route('/dashboard/portfolio/*', function() {
+//    $controller = \Core\Controller::getAdminController("PostController");
+//    $controller->ListAll();
+//});
+//Router::route('/dashboard/portfolio/new/*', function() {
+//    $controller = \Core\Controller::getAdminController("PortfolioController");
+//    $controller->addNew();
+//});
+//Router::route('/dashboard/portfolio/edit(?:/([^/]+))', function($id = 0) {
+//    $controller = \Core\Controller::getAdminController("PostController");
+//    $controller->editPost($id);
+//});
 
 Router::route('/dashboard/user/*', function() {
     $controller = \Core\Controller::getAdminController("PostController");
@@ -199,5 +188,25 @@ Router::route('/dashboard/ajax/*', function() {
 
 });
 
+/*
+ *  AJAX DASHBOARD
+ *
+ */
+
+Router::route('/dashboard/ajax/category/*', function() {
+    $request = Request::getPost();
+    $controller = \Core\Controller::getAdminController("CatController");
+
+
+    if($controller->addNew($request->desc))
+    {
+        $json = ['success' => 'Adicionado com sucesso'];
+    }
+    else{
+        $json = ['error' => ' Categoria com mesmo nome existe'];
+    }
+
+    echo json_encode($json);
+});
 Router::execute($_SERVER['REQUEST_URI']);
 
