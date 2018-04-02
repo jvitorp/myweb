@@ -1,0 +1,169 @@
+
+02/04/2018 03:59:03 PagSeguro.Checkout[info]: Begin
+02/04/2018 03:59:03 PagSeguro.Checkout[info]: POST: https://ws.pagseguro.uol.com.br/v2/checkout?email=neconeditor%40gmail.com&token=your_production_token
+02/04/2018 03:59:03 PagSeguro.Checkout[info]: Params: {"acceptPaymentMethodGroup":"CREDIT_CARD,BALANCE","acceptPaymentMethodName":"DEBITO_ITAU","excludePaymentMethodGroup":"BOLETO","reference":"LIBPHP000001","redirectURL":"http:\/\/www.lojamodelo.com.br","notificationURL":"http:\/\/www.lojamodelo.com.br\/nofitication","currency":"BRL","extraAmount":"11.50","itemId1":"0001","itemDescription1":"Notebook prata","itemQuantity1":2,"itemAmount1":"130.00","itemId2":"0002","itemDescription2":"Notebook preto","itemQuantity2":2,"itemAmount2":"430.00","senderName":"Jo\u00e3o Comprador","senderEmail":"email@comprador.com.br","senderAreaCode":11,"senderPhone":"(**) 5627-****","senderCPF":"ins.***.***-**","shippingType":2,"shippingCost":"20.00","shippingAddressStreet":"Av. Brig. Faria Lima","shippingAddressNumber":"1384","shippingAddressComplement":"apto. 114","shippingAddressCity":"S\u00e3o Paulo","shippingAddressState":"SP","shippingAddressDistrict":"Jardim Paulistano","shippingAddressPostalCode":"01452002","shippingAddressCountry":"BRA","metadataItemKey1":"PASSENGER_CPF","metadataItemValue1":"","metadataItemKey2":"GAME_NAME","metadataItemValue2":"DOTA","metadataItemKey3":"PASSENGER_PASSPORT","metadataItemValue3":"23456","metadataItemGroup3":1,"itemId3":"0003","itemDescription3":"Notebook Amarelo","itemQuantity3":"1","itemAmount3":"200.00","paymentMethodGroup1":"CREDIT_CARD","paymentMethodConfigKey1_1":"DISCOUNT_PERCENT","paymentMethodConfigValue1_1":"10.00","paymentMethodGroup2":"CREDIT_CARD","paymentMethodConfigKey2_1":"MAX_INSTALLMENTS_NO_INTEREST","paymentMethodConfigValue2_1":2,"paymentMethodGroup3":"CREDIT_CARD","paymentMethodConfigKey3_1":"MAX_INSTALLMENTS_LIMIT","paymentMethodConfigValue3_1":6}
+02/04/2018 03:59:03 PagSeguro.Session[error]: Unauthorized
+02/04/2018 04:02:30 PagSeguro.Checkout[info]: Begin
+02/04/2018 04:02:30 PagSeguro.Checkout[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/checkout?email=neconeditor%40gmail.com&token=007275F22B6545B990C9ECB123B1D76A
+02/04/2018 04:02:30 PagSeguro.Checkout[info]: Params: {"acceptPaymentMethodGroup":"CREDIT_CARD,BALANCE","acceptPaymentMethodName":"DEBITO_ITAU","excludePaymentMethodGroup":"BOLETO","reference":"LIBPHP000001","redirectURL":"http:\/\/www.lojamodelo.com.br","notificationURL":"http:\/\/www.lojamodelo.com.br\/nofitication","currency":"BRL","extraAmount":"11.50","itemId1":"0001","itemDescription1":"Notebook prata","itemQuantity1":2,"itemAmount1":"130.00","itemId2":"0002","itemDescription2":"Notebook preto","itemQuantity2":2,"itemAmount2":"430.00","senderName":"Jo\u00e3o Comprador","senderEmail":"email@comprador.com.br","senderAreaCode":11,"senderPhone":"(**) 5627-****","senderCPF":"ins.***.***-**","shippingType":2,"shippingCost":"20.00","shippingAddressStreet":"Av. Brig. Faria Lima","shippingAddressNumber":"1384","shippingAddressComplement":"apto. 114","shippingAddressCity":"S\u00e3o Paulo","shippingAddressState":"SP","shippingAddressDistrict":"Jardim Paulistano","shippingAddressPostalCode":"01452002","shippingAddressCountry":"BRA","metadataItemKey1":"PASSENGER_CPF","metadataItemValue1":"","metadataItemKey2":"GAME_NAME","metadataItemValue2":"DOTA","metadataItemKey3":"PASSENGER_PASSPORT","metadataItemValue3":"23456","metadataItemGroup3":1,"itemId3":"0003","itemDescription3":"Notebook Amarelo","itemQuantity3":"1","itemAmount3":"200.00","paymentMethodGroup1":"CREDIT_CARD","paymentMethodConfigKey1_1":"DISCOUNT_PERCENT","paymentMethodConfigValue1_1":"10.00","paymentMethodGroup2":"CREDIT_CARD","paymentMethodConfigKey2_1":"MAX_INSTALLMENTS_NO_INTEREST","paymentMethodConfigValue2_1":2,"paymentMethodGroup3":"CREDIT_CARD","paymentMethodConfigKey3_1":"MAX_INSTALLMENTS_LIMIT","paymentMethodConfigValue3_1":6}
+02/04/2018 04:02:30 PagSeguro.Session[error]: <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?><errors><error><code>11164</code><message>senderCPF invalid value: insiraumnumerodevalido</message></error><error><code>11123</code><message>MetadataItem Value is required.</message></error></errors>
+02/04/2018 04:03:59 PagSeguro.Checkout[info]: Begin
+02/04/2018 04:03:59 PagSeguro.Checkout[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/checkout?email=neconeditor%40gmail.com&token=007275F22B6545B990C9ECB123B1D76A
+02/04/2018 04:03:59 PagSeguro.Checkout[info]: Params: {"acceptPaymentMethodGroup":"CREDIT_CARD,BALANCE","acceptPaymentMethodName":"DEBITO_ITAU","excludePaymentMethodGroup":"BOLETO","reference":"LIBPHP000001","redirectURL":"http:\/\/www.lojamodelo.com.br","notificationURL":"http:\/\/www.lojamodelo.com.br\/nofitication","currency":"BRL","extraAmount":"11.50","itemId1":"0001","itemDescription1":"Notebook prata","itemQuantity1":2,"itemAmount1":"130.00","itemId2":"0002","itemDescription2":"Notebook preto","itemQuantity2":2,"itemAmount2":"430.00","senderName":"Jo\u00e3o Comprador","senderEmail":"email@comprador.com.br","senderAreaCode":11,"senderPhone":"(**) 5627-****","shippingType":2,"shippingCost":"20.00","shippingAddressStreet":"Av. Brig. Faria Lima","shippingAddressNumber":"1384","shippingAddressComplement":"apto. 114","shippingAddressCity":"S\u00e3o Paulo","shippingAddressState":"SP","shippingAddressDistrict":"Jardim Paulistano","shippingAddressPostalCode":"01452002","shippingAddressCountry":"BRA","metadataItemKey1":"PASSENGER_CPF","metadataItemValue1":"","metadataItemKey2":"GAME_NAME","metadataItemValue2":"DOTA","metadataItemKey3":"PASSENGER_PASSPORT","metadataItemValue3":"23456","metadataItemGroup3":1,"itemId3":"0003","itemDescription3":"Notebook Amarelo","itemQuantity3":"1","itemAmount3":"200.00","paymentMethodGroup1":"CREDIT_CARD","paymentMethodConfigKey1_1":"DISCOUNT_PERCENT","paymentMethodConfigValue1_1":"10.00","paymentMethodGroup2":"CREDIT_CARD","paymentMethodConfigKey2_1":"MAX_INSTALLMENTS_NO_INTEREST","paymentMethodConfigValue2_1":2,"paymentMethodGroup3":"CREDIT_CARD","paymentMethodConfigKey3_1":"MAX_INSTALLMENTS_LIMIT","paymentMethodConfigValue3_1":6}
+02/04/2018 04:03:59 PagSeguro.Session[error]: <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?><errors><error><code>11123</code><message>MetadataItem Value is required.</message></error></errors>
+02/04/2018 04:05:36 PagSeguro.Checkout[info]: Begin
+02/04/2018 04:05:36 PagSeguro.Checkout[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/checkout?email=neconeditor%40gmail.com&token=007275F22B6545B990C9ECB123B1D76A
+02/04/2018 04:05:36 PagSeguro.Checkout[info]: Params: {"acceptPaymentMethodGroup":"CREDIT_CARD,BALANCE","acceptPaymentMethodName":"DEBITO_ITAU","excludePaymentMethodGroup":"BOLETO","reference":"LIBPHP000001","redirectURL":"http:\/\/www.lojamodelo.com.br","notificationURL":"http:\/\/www.lojamodelo.com.br\/nofitication","currency":"BRL","extraAmount":"11.50","itemId1":"0001","itemDescription1":"Notebook prata","itemQuantity1":2,"itemAmount1":"130.00","itemId2":"0002","itemDescription2":"Notebook preto","itemQuantity2":2,"itemAmount2":"430.00","senderName":"Jo\u00e3o Comprador","senderEmail":"email@comprador.com.br","senderAreaCode":11,"senderPhone":"(**) 5627-****","shippingType":2,"shippingCost":"20.00","shippingAddressStreet":"Av. Brig. Faria Lima","shippingAddressNumber":"1384","shippingAddressComplement":"apto. 114","shippingAddressCity":"S\u00e3o Paulo","shippingAddressState":"SP","shippingAddressDistrict":"Jardim Paulistano","shippingAddressPostalCode":"01452002","shippingAddressCountry":"BRA","metadataItemKey1":"PASSENGER_CPF","metadataItemValue1":"","metadataItemKey2":"GAME_NAME","metadataItemValue2":"DOTA","metadataItemKey3":"PASSENGER_PASSPORT","metadataItemValue3":"23456","metadataItemGroup3":1,"itemId3":"0003","itemDescription3":"Notebook Amarelo","itemQuantity3":"1","itemAmount3":"200.00","paymentMethodGroup1":"CREDIT_CARD","paymentMethodConfigKey1_1":"DISCOUNT_PERCENT","paymentMethodConfigValue1_1":"10.00","paymentMethodGroup2":"CREDIT_CARD","paymentMethodConfigKey2_1":"MAX_INSTALLMENTS_NO_INTEREST","paymentMethodConfigValue2_1":2,"paymentMethodGroup3":"CREDIT_CARD","paymentMethodConfigKey3_1":"MAX_INSTALLMENTS_LIMIT","paymentMethodConfigValue3_1":6}
+02/04/2018 04:05:36 PagSeguro.Session[error]: <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?><errors><error><code>11123</code><message>MetadataItem Value is required.</message></error></errors>
+02/04/2018 04:29:33 PagSeguro.Checkout[info]: Begin
+02/04/2018 04:29:33 PagSeguro.Checkout[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/checkout?email=neconeditor%40gmail.com&token=007275F22B6545B990C9ECB123B1D76A
+02/04/2018 04:29:33 PagSeguro.Checkout[info]: Params: {"acceptPaymentMethodGroup":"CREDIT_CARD,BALANCE","acceptPaymentMethodName":"DEBITO_ITAU","excludePaymentMethodGroup":"BOLETO","reference":"LIBPHP000001","redirectURL":"http:\/\/www.lojamodelo.com.br","notificationURL":"http:\/\/www.lojamodelo.com.br\/nofitication","currency":"BRL","extraAmount":"11.50","itemId1":"0001","itemDescription1":"Notebook prata","itemQuantity1":2,"itemAmount1":"130.00","itemId2":"0002","itemDescription2":"Notebook preto","itemQuantity2":2,"itemAmount2":"430.00","senderName":"Jo\u00e3o Comprador","senderEmail":"email@comprador.com.br","senderAreaCode":11,"senderPhone":"(**) 5627-****","shippingType":2,"shippingCost":"20.00","shippingAddressStreet":"Av. Brig. Faria Lima","shippingAddressNumber":"1384","shippingAddressComplement":"apto. 114","shippingAddressCity":"S\u00e3o Paulo","shippingAddressState":"SP","shippingAddressDistrict":"Jardim Paulistano","shippingAddressPostalCode":"01452002","shippingAddressCountry":"BRA","metadataItemKey1":"PASSENGER_CPF","metadataItemValue1":"","metadataItemKey2":"GAME_NAME","metadataItemValue2":"DOTA","metadataItemKey3":"PASSENGER_PASSPORT","metadataItemValue3":"23456","metadataItemGroup3":1,"itemId3":"0003","itemDescription3":"Notebook Amarelo","itemQuantity3":"1","itemAmount3":"200.00","paymentMethodGroup1":"CREDIT_CARD","paymentMethodConfigKey1_1":"DISCOUNT_PERCENT","paymentMethodConfigValue1_1":"10.00","paymentMethodGroup2":"CREDIT_CARD","paymentMethodConfigKey2_1":"MAX_INSTALLMENTS_NO_INTEREST","paymentMethodConfigValue2_1":2,"paymentMethodGroup3":"CREDIT_CARD","paymentMethodConfigKey3_1":"MAX_INSTALLMENTS_LIMIT","paymentMethodConfigValue3_1":6}
+02/04/2018 04:29:33 PagSeguro.Session[error]: <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?><errors><error><code>11123</code><message>MetadataItem Value is required.</message></error></errors>
+02/04/2018 04:35:26 PagSeguro.Session[info]: Begin
+02/04/2018 04:35:26 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=neconeditor%40gmail.com&token=007275F22B6545B990C9ECB123B1D76A
+02/04/2018 04:35:26 PagSeguro.Session[info]: Session ID: 11e5521693534cd6a50c43aaf9f91a9b
+02/04/2018 04:35:29 PagSeguro.Session[info]: Begin
+02/04/2018 04:35:29 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=neconeditor%40gmail.com&token=007275F22B6545B990C9ECB123B1D76A
+02/04/2018 04:35:29 PagSeguro.Session[info]: Session ID: 3f9fef322e954e27b4a38823b61fcd9a
+02/04/2018 04:41:04 PagSeguro.Session[info]: Begin
+02/04/2018 04:41:04 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=neconeditor%40gmail.com&token=007275F22B6545B990C9ECB123B1D76A
+02/04/2018 04:41:04 PagSeguro.Session[info]: Session ID: c3f1832a97c54318a66458a6a02a2aa8
+02/04/2018 04:41:55 PagSeguro.Session[info]: Begin
+02/04/2018 04:41:55 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=neconeditor%40gmail.com&token=007275F22B6545B990C9ECB123B1D76A
+02/04/2018 04:41:55 PagSeguro.Session[info]: Session ID: f01bd103044d42f4b71954ee3b9a49a8
+02/04/2018 04:41:55 PagSeguro.Checkout[info]: Begin
+02/04/2018 04:41:55 PagSeguro.Checkout[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/checkout?email=neconeditor%40gmail.com&token=007275F22B6545B990C9ECB123B1D76A
+02/04/2018 04:41:55 PagSeguro.Checkout[info]: Params: {"reference":"LIBPHP000001","redirectURL":"http:\/\/www.lojamodelo.com.br","currency":"BRL","extraAmount":"11.50","itemId1":"0001","itemDescription1":"Notebook prata","itemQuantity1":2,"itemAmount1":"130.00","itemId2":"0002","itemDescription2":"Notebook preto","itemQuantity2":2,"itemAmount2":"430.00","senderName":"Jo\u00e3o Comprador","senderEmail":"email@comprador.com.br","senderAreaCode":11,"senderPhone":"(**) 5627-****"}
+02/04/2018 04:41:55 PagSeguro.Checkout[info]: Checkout URL: https://sandbox.pagseguro.uol.com.br/v2/checkout/payment.html?code=2CD2962B11116ADFF4BA0F90B5545D24
+02/04/2018 04:47:05 PagSeguro.Session[info]: Begin
+02/04/2018 04:47:05 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=neconeditor%40gmail.com&token=007275F22B6545B990C9ECB123B1D76A
+02/04/2018 04:47:05 PagSeguro.Session[info]: Session ID: 54ad3c49fff842ee9d16eb532763483b
+02/04/2018 04:47:05 PagSeguro.Checkout[info]: Begin
+02/04/2018 04:47:05 PagSeguro.Checkout[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/checkout?email=neconeditor%40gmail.com&token=007275F22B6545B990C9ECB123B1D76A
+02/04/2018 04:47:05 PagSeguro.Checkout[info]: Params: {"reference":"LIBPHP000001","redirectURL":"http:\/\/www.lojamodelo.com.br","currency":"BRL","extraAmount":"11.50","itemId1":"0001","itemDescription1":"Notebook prata","itemQuantity1":2,"itemAmount1":"130.00","itemId2":"0002","itemDescription2":"Notebook preto","itemQuantity2":2,"itemAmount2":"430.00","senderName":"Jo\u00e3o Comprador","senderEmail":"email@comprador.com.br","senderAreaCode":11,"senderPhone":"(**) 5627-****"}
+02/04/2018 04:47:05 PagSeguro.Checkout[info]: Checkout URL: https://sandbox.pagseguro.uol.com.br/v2/checkout/payment.html?code=E7ABFD68E6E60EB554EDFFB508FF6341
+02/04/2018 04:50:04 PagSeguro.Session[info]: Begin
+02/04/2018 04:50:04 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=neconeditor%40gmail.com&token=007275F22B6545B990C9ECB123B1D76A
+02/04/2018 04:50:04 PagSeguro.Session[info]: Session ID: 3afb4e6462de4dc39f87f0beed274276
+02/04/2018 04:50:04 PagSeguro.Application.Notification[info]: Begin
+02/04/2018 04:50:04 PagSeguro.Application.Notification[error]: Invalid notification parameters.
+02/04/2018 04:50:22 PagSeguro.Session[info]: Begin
+02/04/2018 04:50:22 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=neconeditor%40gmail.com&token=007275F22B6545B990C9ECB123B1D76A
+02/04/2018 04:50:22 PagSeguro.Session[info]: Session ID: add590af29a44cd7a6230f3830691981
+02/04/2018 04:50:22 PagSeguro.Application.Notification[info]: Begin
+02/04/2018 04:50:22 PagSeguro.Application.Notification[error]: Invalid notification parameters.
+02/04/2018 04:53:53 PagSeguro.Session[info]: Begin
+02/04/2018 04:53:53 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=neconeditor%40gmail.com&token=007275F22B6545B990C9ECB123B1D76A
+02/04/2018 04:53:54 PagSeguro.Session[info]: Session ID: 150b989051614178a71308bb303f7a5a
+02/04/2018 04:53:54 PagSeguro.Application.Notification[info]: Begin
+02/04/2018 04:53:54 PagSeguro.Application.Notification[error]: Invalid notification parameters.
+02/04/2018 04:53:55 PagSeguro.Session[info]: Begin
+02/04/2018 04:53:55 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=neconeditor%40gmail.com&token=007275F22B6545B990C9ECB123B1D76A
+02/04/2018 04:53:55 PagSeguro.Session[info]: Session ID: af4fd1239a61444d9eebd620e00b6009
+02/04/2018 04:53:55 PagSeguro.Application.Notification[info]: Begin
+02/04/2018 04:53:55 PagSeguro.Application.Notification[error]: Invalid notification parameters.
+02/04/2018 04:53:57 PagSeguro.Session[info]: Begin
+02/04/2018 04:53:57 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=neconeditor%40gmail.com&token=007275F22B6545B990C9ECB123B1D76A
+02/04/2018 04:53:57 PagSeguro.Session[info]: Session ID: f09d8de87e6640d8a3e3ab3aa04e5fc3
+02/04/2018 04:53:57 PagSeguro.Application.Notification[info]: Begin
+02/04/2018 04:53:57 PagSeguro.Application.Notification[error]: Invalid notification parameters.
+02/04/2018 04:54:50 PagSeguro.Session[info]: Begin
+02/04/2018 04:54:50 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=neconeditor%40gmail.com&token=007275F22B6545B990C9ECB123B1D76A
+02/04/2018 04:54:50 PagSeguro.Session[info]: Session ID: ee25410777854e8da3111f64fb5c383a
+02/04/2018 04:54:50 PagSeguro.Application.Notification[info]: Begin
+02/04/2018 04:54:50 PagSeguro.Application.Notification[error]: Invalid notification parameters.
+02/04/2018 04:56:07 PagSeguro.Session[info]: Begin
+02/04/2018 04:56:07 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=neconeditor%40gmail.com&token=007275F22B6545B990C9ECB123B1D76A
+02/04/2018 04:56:08 PagSeguro.Session[info]: Session ID: f9c725763a094dacb5556c13a55a8319
+02/04/2018 04:56:08 PagSeguro.Application.Notification[info]: Begin
+02/04/2018 04:56:08 PagSeguro.Application.Notification[error]: Invalid notification parameters.
+02/04/2018 04:56:17 PagSeguro.Session[info]: Begin
+02/04/2018 04:56:17 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=neconeditor%40gmail.com&token=007275F22B6545B990C9ECB123B1D76A
+02/04/2018 04:56:18 PagSeguro.Session[info]: Session ID: 4ef3c9daf2a0410596e1fec589684586
+02/04/2018 04:56:18 PagSeguro.Checkout[info]: Begin
+02/04/2018 04:56:18 PagSeguro.Checkout[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/checkout?email=neconeditor%40gmail.com&token=007275F22B6545B990C9ECB123B1D76A
+02/04/2018 04:56:18 PagSeguro.Checkout[info]: Params: {"reference":"LIBPHP000001","redirectURL":"http:\/\/www.lojamodelo.com.br","currency":"BRL","extraAmount":"11.50","itemId1":"0001","itemDescription1":"Notebook prata","itemQuantity1":2,"itemAmount1":"130.00","itemId2":"0002","itemDescription2":"Notebook preto","itemQuantity2":2,"itemAmount2":"430.00","senderName":"Jo\u00e3o Comprador","senderEmail":"email@comprador.com.br","senderAreaCode":11,"senderPhone":"(**) 5627-****"}
+02/04/2018 04:56:18 PagSeguro.Checkout[info]: Checkout URL: https://sandbox.pagseguro.uol.com.br/v2/checkout/payment.html?code=578CB74E0C0CB99DD4460F91FAEF6FF8
+02/04/2018 05:09:31 PagSeguro.Authorization[info]: Begin
+02/04/2018 05:09:31 PagSeguro.Authorization[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/authorizations/request?appId=your_production_application_id&appKey=your_production_application_key
+02/04/2018 05:09:31 PagSeguro.Checkout[info]: Params: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<authorizationRequest><reference>AUTH_LIB_PHP_0001</reference><permissions><code>CREATE_CHECKOUTS</code><code>SEARCH_TRANSACTIONS</code><code>RECEIVE_TRANSACTION_NOTIFICATIONS</code><code>MANAGE_PAYMENT_PRE_APPROVALS</code><code>DIRECT_PAYMENT</code></permissions><redirectURL>http://www.lojamodelo.com.br</redirectURL><notificationURL>http://www.lojamodelo.com.br/nofitication</notificationURL></authorizationRequest>
+
+02/04/2018 05:09:31 PagSeguro.Authorization[error]: Unauthorized
+02/04/2018 05:09:32 PagSeguro.Authorization[info]: Begin
+02/04/2018 05:09:32 PagSeguro.Authorization[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/authorizations/request?appId=your_production_application_id&appKey=your_production_application_key
+02/04/2018 05:09:32 PagSeguro.Checkout[info]: Params: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<authorizationRequest><reference>AUTH_LIB_PHP_0001</reference><permissions><code>CREATE_CHECKOUTS</code><code>SEARCH_TRANSACTIONS</code><code>RECEIVE_TRANSACTION_NOTIFICATIONS</code><code>MANAGE_PAYMENT_PRE_APPROVALS</code><code>DIRECT_PAYMENT</code></permissions><redirectURL>http://www.lojamodelo.com.br</redirectURL><notificationURL>http://www.lojamodelo.com.br/nofitication</notificationURL></authorizationRequest>
+
+02/04/2018 05:09:32 PagSeguro.Authorization[error]: Unauthorized
+02/04/2018 05:09:35 PagSeguro.Authorization[info]: Begin
+02/04/2018 05:09:35 PagSeguro.Authorization[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/authorizations/request?appId=your_production_application_id&appKey=your_production_application_key
+02/04/2018 05:09:35 PagSeguro.Checkout[info]: Params: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<authorizationRequest><reference>AUTH_LIB_PHP_0001</reference><permissions><code>CREATE_CHECKOUTS</code><code>SEARCH_TRANSACTIONS</code><code>RECEIVE_TRANSACTION_NOTIFICATIONS</code><code>MANAGE_PAYMENT_PRE_APPROVALS</code><code>DIRECT_PAYMENT</code></permissions><redirectURL>http://www.lojamodelo.com.br</redirectURL><notificationURL>http://www.lojamodelo.com.br/nofitication</notificationURL></authorizationRequest>
+
+02/04/2018 05:09:35 PagSeguro.Authorization[error]: Unauthorized
+02/04/2018 05:14:34 PagSeguro.Installment[info]: Begin
+02/04/2018 05:14:34 PagSeguro.Installment[info]: GET: https://ws.sandbox.pagseguro.uol.com.br/v2/installments?email=neconeditor%40gmail.com&token=007275F22B6545B990C9ECB123B1D76A&amount=30.00&cardBrand=visa&maxInstallmentNoInterest=2
+02/04/2018 05:17:49 PagSeguro.Session[info]: Begin
+02/04/2018 05:17:49 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=neconeditor%40gmail.com&token=007275F22B6545B990C9ECB123B1D76A
+02/04/2018 05:17:49 PagSeguro.Session[info]: Session ID: e69f72cee5164e52939b425199c83b19
+02/04/2018 05:17:49 PagSeguro.Checkout[info]: Begin
+02/04/2018 05:17:49 PagSeguro.Checkout[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/checkout?appId=your_production_application_id&appKey=your_production_application_key
+02/04/2018 05:17:49 PagSeguro.Checkout[info]: Params: {"reference":"LIBPHP000001","redirectURL":"http:\/\/www.lojamodelo.com.br","currency":"BRL","extraAmount":"11.50","itemId1":"0001","itemDescription1":"Notebook prata","itemQuantity1":2,"itemAmount1":"130.00","itemId2":"0002","itemDescription2":"Notebook preto","itemQuantity2":2,"itemAmount2":"430.00","senderName":"Jo\u00e3o Comprador","senderEmail":"email@comprador.com.br","senderAreaCode":11,"senderPhone":"(**) 5627-****"}
+02/04/2018 05:17:49 PagSeguro.Session[error]: Unauthorized
+02/04/2018 05:18:45 PagSeguro.Session[info]: Begin
+02/04/2018 05:18:45 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=neconeditor%40gmail.com&token=007275F22B6545B990C9ECB123B1D76A
+02/04/2018 05:18:45 PagSeguro.Session[info]: Session ID: 84017772ad014754b583e997a5272233
+02/04/2018 05:18:45 PagSeguro.Checkout[info]: Begin
+02/04/2018 05:18:45 PagSeguro.Checkout[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/checkout?appId=your_production_application_id&appKey=your_production_application_key
+02/04/2018 05:18:45 PagSeguro.Checkout[info]: Params: {"reference":"LIBPHP000001","redirectURL":"http:\/\/www.lojamodelo.com.br","currency":"BRL","extraAmount":"11.50","itemId1":"0001","itemDescription1":"Notebook prata","itemQuantity1":2,"itemAmount1":"130.00","itemId2":"0002","itemDescription2":"Notebook preto","itemQuantity2":2,"itemAmount2":"430.00","senderName":"Jo\u00e3o Comprador","senderEmail":"email@comprador.com.br","senderAreaCode":11,"senderPhone":"(**) 5627-****"}
+02/04/2018 05:18:45 PagSeguro.Session[error]: Unauthorized
+02/04/2018 05:22:41 PagSeguro.Checkout[info]: Begin
+02/04/2018 05:22:41 PagSeguro.Checkout[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/checkout?appId=your_production_application_id&appKey=your_production_application_key
+02/04/2018 05:22:41 PagSeguro.Checkout[info]: Params: {"reference":"LIBPHP000001","redirectURL":"http:\/\/www.lojamodelo.com.br","currency":"BRL","extraAmount":"11.50","itemId1":"0001","itemDescription1":"Notebook prata","itemQuantity1":2,"itemAmount1":"130.00","itemId2":"0002","itemDescription2":"Notebook preto","itemQuantity2":2,"itemAmount2":"430.00","senderName":"Jo\u00e3o Comprador","senderEmail":"email@comprador.com.br","senderAreaCode":11,"senderPhone":"(**) 5627-****"}
+02/04/2018 05:22:41 PagSeguro.Session[error]: Unauthorized
+02/04/2018 05:22:58 PagSeguro.Checkout[info]: Begin
+02/04/2018 05:22:58 PagSeguro.Checkout[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/checkout?appId=your_production_application_id&appKey=your_production_application_key
+02/04/2018 05:22:58 PagSeguro.Checkout[info]: Params: {"reference":"LIBPHP000001","redirectURL":"http:\/\/www.lojamodelo.com.br","currency":"BRL","extraAmount":"11.50","itemId1":"0001","itemDescription1":"Notebook prata","itemQuantity1":2,"itemAmount1":"130.00","itemId2":"0002","itemDescription2":"Notebook preto","itemQuantity2":2,"itemAmount2":"430.00","senderName":"Jo\u00e3o Comprador","senderEmail":"email@comprador.com.br","senderAreaCode":11,"senderPhone":"(**) 5627-****"}
+02/04/2018 05:22:58 PagSeguro.Session[error]: Unauthorized
+02/04/2018 05:23:10 PagSeguro.Session[info]: Begin
+02/04/2018 05:23:10 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=neconeditor%40gmail.com&token=007275F22B6545B990C9ECB123B1D76A
+02/04/2018 05:23:11 PagSeguro.Session[info]: Session ID: 209b9e1d35f6401fb43eeda89ce020e9
+02/04/2018 05:23:11 PagSeguro.Checkout[info]: Begin
+02/04/2018 05:23:11 PagSeguro.Checkout[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/checkout?appId=your_production_application_id&appKey=your_production_application_key
+02/04/2018 05:23:11 PagSeguro.Checkout[info]: Params: {"reference":"LIBPHP000001","redirectURL":"http:\/\/www.lojamodelo.com.br","currency":"BRL","extraAmount":"11.50","itemId1":"0001","itemDescription1":"Notebook prata","itemQuantity1":2,"itemAmount1":"130.00","itemId2":"0002","itemDescription2":"Notebook preto","itemQuantity2":2,"itemAmount2":"430.00","senderName":"Jo\u00e3o Comprador","senderEmail":"email@comprador.com.br","senderAreaCode":11,"senderPhone":"(**) 5627-****"}
+02/04/2018 05:23:11 PagSeguro.Session[error]: Unauthorized
+02/04/2018 05:27:00 PagSeguro.Session[info]: Begin
+02/04/2018 05:27:00 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=neconeditor%40gmail.com&token=007275F22B6545B990C9ECB123B1D76A
+02/04/2018 05:27:01 PagSeguro.Session[info]: Session ID: 5ce520d046254cc6b850836d6e260f2f
+02/04/2018 05:27:01 PagSeguro.Checkout[info]: Begin
+02/04/2018 05:27:01 PagSeguro.Checkout[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/checkout?appId=your_production_application_id&appKey=your_production_application_key
+02/04/2018 05:27:01 PagSeguro.Checkout[info]: Params: {"reference":"LIBPHP00000qwe1","redirectURL":"http:\/\/www.lojamodelo.com.br","currency":"BRL","extraAmount":"11.50","itemId1":"0001","itemDescription1":"Note2book prata","itemQuantity1":2,"itemAmount1":"130.00","itemId2":"0002","itemDescription2":"Note2book preto","itemQuantity2":2,"itemAmount2":"430.00","senderName":"Jo\u00e3o Comprador","senderEmail":"email@comprador.com.br","senderAreaCode":11,"senderPhone":"(**) 5627-****"}
+02/04/2018 05:27:01 PagSeguro.Session[error]: Unauthorized
+02/04/2018 05:27:56 PagSeguro.Session[info]: Begin
+02/04/2018 05:27:56 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=neconeditor%40gmail.com&token=007275F22B6545B990C9ECB123B1D76A
+02/04/2018 05:27:57 PagSeguro.Session[info]: Session ID: 254127a7033744e8a352629a471d83be
+02/04/2018 05:27:57 PagSeguro.Checkout[info]: Begin
+02/04/2018 05:27:57 PagSeguro.Checkout[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/checkout?email=neconeditor%40gmail.com&token=007275F22B6545B990C9ECB123B1D76A
+02/04/2018 05:27:57 PagSeguro.Checkout[info]: Params: {"reference":"LIBPHP00000qwe1","redirectURL":"http:\/\/www.lojamodelo.com.br","currency":"BRL","extraAmount":"11.50","itemId1":"0001","itemDescription1":"Note2book prata","itemQuantity1":2,"itemAmount1":"130.00","itemId2":"0002","itemDescription2":"Note2book preto","itemQuantity2":2,"itemAmount2":"430.00","senderName":"Jo\u00e3o Comprador","senderEmail":"email@comprador.com.br","senderAreaCode":11,"senderPhone":"(**) 5627-****"}
+02/04/2018 05:27:57 PagSeguro.Checkout[info]: Checkout URL: https://sandbox.pagseguro.uol.com.br/v2/checkout/payment.html?code=509CA305F2F24E1BB459BFA9FE5F62B2
+02/04/2018 05:33:01 PagSeguro.Application.Notification[info]: Begin
+02/04/2018 05:33:01 PagSeguro.Application.Notification[error]: Invalid notification parameters.
+02/04/2018 05:40:01 PagSeguro.Authorization[info]: Begin
+02/04/2018 05:40:01 PagSeguro.Authorization[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/authorizations/request?appId=your_sandbox_application_id&appKey=your_sandbox_application_key
+02/04/2018 05:40:01 PagSeguro.Checkout[info]: Params: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<authorizationRequest><reference>AUTH_LIB_PHP_0001</reference><permissions><code>CREATE_CHECKOUTS</code><code>SEARCH_TRANSACTIONS</code><code>RECEIVE_TRANSACTION_NOTIFICATIONS</code><code>MANAGE_PAYMENT_PRE_APPROVALS</code><code>DIRECT_PAYMENT</code></permissions><redirectURL>http://www.lojamodelo.com.br</redirectURL><notificationURL>http://www.lojamodelo.com.br/nofitication</notificationURL><account><email>john@doe.com</email><type>PERSONAL</type><person><name>John Doe</name><birthDate>1990-10-10</birthDate><phones><phone><type>MOBILE</type><areaCode>00</areaCode><number>000000000</number><type>BUSINESS</type><areaCode>00</areaCode><number>000000000</number><type>BUSINESS</type><areaCode>00</areaCode><number>000000000</number></phone></phones><documents><document><type>CPF</type><value>00000000000</value></document></documents><address><postalCode>00000000</postalCode><street>Rua Um</street><number>1</number><complement>Sem complemento</complement><district>Bairro</district><city>Cidade</city><state>UF</state><country>BRA</country></address></person></account></authorizationRequest>
+
+02/04/2018 05:40:01 PagSeguro.Authorization[error]: Unauthorized
+02/04/2018 05:40:02 PagSeguro.Authorization[info]: Begin
+02/04/2018 05:40:02 PagSeguro.Authorization[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/authorizations/request?appId=your_sandbox_application_id&appKey=your_sandbox_application_key
+02/04/2018 05:40:02 PagSeguro.Checkout[info]: Params: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<authorizationRequest><reference>AUTH_LIB_PHP_0001</reference><permissions><code>CREATE_CHECKOUTS</code><code>SEARCH_TRANSACTIONS</code><code>RECEIVE_TRANSACTION_NOTIFICATIONS</code><code>MANAGE_PAYMENT_PRE_APPROVALS</code><code>DIRECT_PAYMENT</code></permissions><redirectURL>http://www.lojamodelo.com.br</redirectURL><notificationURL>http://www.lojamodelo.com.br/nofitication</notificationURL><account><email>john@doe.com</email><type>PERSONAL</type><person><name>John Doe</name><birthDate>1990-10-10</birthDate><phones><phone><type>MOBILE</type><areaCode>00</areaCode><number>000000000</number><type>BUSINESS</type><areaCode>00</areaCode><number>000000000</number><type>BUSINESS</type><areaCode>00</areaCode><number>000000000</number></phone></phones><documents><document><type>CPF</type><value>00000000000</value></document></documents><address><postalCode>00000000</postalCode><street>Rua Um</street><number>1</number><complement>Sem complemento</complement><district>Bairro</district><city>Cidade</city><state>UF</state><country>BRA</country></address></person></account></authorizationRequest>
+
+02/04/2018 05:40:02 PagSeguro.Authorization[error]: Unauthorized
+02/04/2018 05:40:11 PagSeguro.Authorization[info]: Begin
+02/04/2018 05:40:11 PagSeguro.Authorization[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/authorizations/request?appId=your_sandbox_application_id&appKey=your_sandbox_application_key
+02/04/2018 05:40:11 PagSeguro.Checkout[info]: Params: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<authorizationRequest><reference>AUTH_LIB_PHP_0001</reference><permissions><code>CREATE_CHECKOUTS</code><code>SEARCH_TRANSACTIONS</code><code>RECEIVE_TRANSACTION_NOTIFICATIONS</code><code>MANAGE_PAYMENT_PRE_APPROVALS</code><code>DIRECT_PAYMENT</code></permissions><redirectURL>http://www.lojamodelo.com.br</redirectURL><notificationURL>http://www.lojamodelo.com.br/nofitication</notificationURL><account><email>john@doe.com</email><type>PERSONAL</type><person><name>John Doe</name><birthDate>1990-10-10</birthDate><phones><phone><type>MOBILE</type><areaCode>00</areaCode><number>000000000</number><type>BUSINESS</type><areaCode>00</areaCode><number>000000000</number><type>BUSINESS</type><areaCode>00</areaCode><number>000000000</number></phone></phones><documents><document><type>CPF</type><value>00000000000</value></document></documents><address><postalCode>00000000</postalCode><street>Rua Um</street><number>1</number><complement>Sem complemento</complement><district>Bairro</district><city>Cidade</city><state>UF</state><country>BRA</country></address></person></account></authorizationRequest>
+
+02/04/2018 05:40:11 PagSeguro.Authorization[error]: Unauthorized

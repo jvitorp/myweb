@@ -48,13 +48,12 @@ class Page
      */
     public function Page()
     {
-        $string = "SELECT {$this->Col} from {$this->Table} {$this->Order}  LIMIT  {$this->First},{$this->registros} ";
+        $string = "SELECT {$this->Col} from {$this->Table} {$this->Order}  LIMIT  {$this->First},{$this->Last} ";
         // Caso numero de paginas for menor que o total de paginas retorna um false
         if($this->numPaginas >= $this->Pagina) {
             $this->Query = DbRead::Query($string);
             // Gera os button
             for ($i = 1; $i <= $this->numPaginas; $i++) {
-
                 if($i == $this->Pagina){
                     $this->btn .= "<li><a class='button small active' href='/post/page/{$i}'>{$i}</a></li>";
                 }else{

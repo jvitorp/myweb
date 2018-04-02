@@ -270,5 +270,49 @@ Router::route('/mail/*', function() {
         echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
     }
 });
+Router::route('/pag/*', function() {
+    \PagSeguro\Library::initialize();
+    \PagSeguro\Library::cmsVersion()->setName("Nome")->setRelease("1.0.0");
+    \PagSeguro\Library::moduleVersion()->setName("Nome")->setRelease("1.0.0");
+    \PagSeguro\Configuration\Configure::setEnvironment('sandbox');//production or sandbox
+    \PagSeguro\Configuration\Configure::setAccountCredentials(
+        'neconeditor@gmail.com',
+        '007275F22B6545B990C9ECB123B1D76A'
+    );
+
+    $payment = new \PagSeguro\Domains\Requests\Payment();
+    $payment->addItems()->withParameters(
+        '0001',
+        'Notebook prata',
+        2,
+        130.00
+    );
+
+    $payment->setCurrency("BRL");
+    $payment->setExtraAmount(11.5);
+    $payment->setReference("1");
+    $payment->setRedirectUrl("http://www.lojamodelo.com.br");
+// Set your customer information.
+    $payment->setSender()->setName('João Comprador');
+    $payment->setSender()->setEmail('email@comprador.com.br');
+
+    try {
+        /**
+         * @todo For checkout with application use:
+         * \PagSeguro\Configuration\Configure::getApplicationCredentials()
+         *  ->setAuthorizationCode("FD3AF1B214EC40F0B0A6745D041BF50D")
+         */
+        $onlyCheckoutCode = true;
+        $result = $payment->register(
+            \PagSeguro\Configuration\Configure::getAccountCredentials(),
+            $onlyCheckoutCode
+        );
+        echo "<pre>";
+       print_r($result);
+    } catch (Exception $e) {
+        die($e->getMessage());
+    }
+
+});
 Router::execute($_SERVER['REQUEST_URI']);
 

@@ -21,8 +21,10 @@ class Home extends View
     {
         parent::newAssign("title","Blog João Vitor P. - Sobre Desenvolvimento Web");
         parent::newAssign("content","home");
-        $posts = DbRead::Query("SELECT post_id,post_title,post_content,post_autor,post_date,post_thumb FROM cms_posts ORDER BY post_date DESC LIMIT 4");
-        parent::newAssign("recent",$posts);
+        $portfolio = DbRead::Query("SELECT post_id,post_title,post_content,post_autor,post_date,post_thumb FROM cms_posts WHERE post_category = 1  ORDER BY post_date DESC LIMIT 4");
+        $blog = DbRead::Query("SELECT post_id,post_title,post_content,post_autor,post_date,post_thumb FROM cms_posts WHERE post_category = 2  ORDER BY post_date DESC LIMIT 4");
+        parent::newAssign("recent",$portfolio);
+        parent::newAssign("blog",$blog);
         parent::newAssign("test",$test = new FilterStr());
         View::setDisplay("content");
     }

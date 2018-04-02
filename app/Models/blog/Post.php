@@ -44,7 +44,7 @@ class Post extends View
     public static function getRecent($pagina)
     {
         if(Post::allPost() > 0){
-            $page = new Page(Post::allPost(),4,$pagina,"post_id,post_title,post_content,post_autor,post_date,post_thumb","cms_posts","ORDER BY post_date DESC");
+            $page = new Page(Post::allPost(),8,$pagina,"post_id,post_title,post_content,post_autor,post_date,post_thumb","cms_posts","ORDER BY post_date DESC");
             $page->Page();
             parent::newAssign("title","Blog João Vitor P. - Sobre Desenvolvimento Web | Pagina {$pagina} ");
             parent::newAssign("content","blog-home");

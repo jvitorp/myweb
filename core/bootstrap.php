@@ -6,6 +6,7 @@ require_once __DIR__ . "/../app/library/Rain/autoload.php";
 require_once __DIR__ . "/../Settings.php";
 
 // namespace
+define("logs",__DIR__ . "/logs/");
 
 
 
