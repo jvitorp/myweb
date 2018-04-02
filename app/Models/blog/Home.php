@@ -21,7 +21,7 @@ class Home extends View
     {
         parent::newAssign("title","Blog João Vitor P. - Sobre Desenvolvimento Web");
         parent::newAssign("content","home");
-        $posts = DbRead::Query("SELECT post_id,post_title,post_content,post_autor,post_date,post_thumb FROM cms_posts");
+        $posts = DbRead::Query("SELECT post_id,post_title,post_content,post_autor,post_date,post_thumb FROM cms_posts ORDER BY post_date DESC LIMIT 4");
         parent::newAssign("recent",$posts);
         parent::newAssign("test",$test = new FilterStr());
         View::setDisplay("content");
@@ -30,6 +30,13 @@ class Home extends View
     public function getContactForm()
     {
 
+    }
+
+    public function getNotFound()
+    {
+        parent::newAssign("title","404 Not Found | Blog João Vitor P. - Sobre Desenvolvimento Web");
+        parent::newAssign("content","404");
+        View::setDisplay("content");
     }
 
 }

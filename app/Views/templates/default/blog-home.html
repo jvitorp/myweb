@@ -1,0 +1,33 @@
+
+<section id="two">
+    <h2>Portfólio </h2>
+
+    <div class="row">
+        {loop="$recent" as $post}
+        <article class="6u 12u$(xsmall) work-item">
+            <a href='{#URL#}post/{$post.post_id}/{$test->UrlFriendly($post.post_title)}' class="image fit thumb"><img src="{#URL#}{$post.post_thumb}" alt="" /></a>
+            <h3>{$post.post_title}</h3>
+            {autoescape="off"}
+            {function="resumo($post.post_content,150)"}
+            {/autoescape}
+
+
+            <br>
+
+
+        </article>
+
+        {/loop}
+    </div>
+
+    <ul class="actions">
+
+        {autoescape="off"}
+        {$pagination}
+        {/autoescape}
+    </ul>
+
+</section>
+
+
+

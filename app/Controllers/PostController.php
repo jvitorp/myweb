@@ -19,4 +19,10 @@ class PostController
         $post = new Post();
         $post->getPost($id);
     }
+
+    public static function getRecent($pagina = 1)
+    {
+        $post = new Post();
+        $post->getRecent($pagina);
+    }
 }

@@ -54,7 +54,9 @@ class Session
 
     public static function setVisit()
     {
-        if(self::getSession("visitante")){
+        DbRead::SimpleRead("SELECT visit_ip FROM cms_visit WHERE visit_ip = ?",array($_SERVER['REMOTE_ADDR']));
+
+        if(DbRead::getCount() > 0){
             self::setSession("visitante",
                 array(
                     "ip" => $_SERVER['REMOTE_ADDR'],

@@ -10,9 +10,17 @@ namespace App\Models\dashboard;
 use Core\DbCreate;
 use Core\View;
 use Core\DbRead;
+use Core\Redirect;
 
 class Category extends View implements AddInt
 {
+    public function __construct()
+    {
+        if(!Auth::CheckSession()){
+            Redirect::Redirect("/auth");
+        }
+    }
+
     public static function listAll()
     {
         parent::newAssign("title","Gerenciador de Categorias - CMS");

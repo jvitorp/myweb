@@ -13,12 +13,12 @@ namespace App\Models\dashboard;
 use Core\DbRead;
 use Core\DbCreate;
 use Core\View;
+use Core\Redirect;
 
 
 
 class Post extends View
 {
-
 
 
     public static function getPost()
@@ -57,6 +57,8 @@ class Post extends View
         View::setDisplay("content");
 
     }
+
+
 
 
 }

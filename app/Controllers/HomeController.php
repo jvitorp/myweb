@@ -22,4 +22,9 @@ class HomeController extends Home
 
 
     }
+
+    public static function NotFound()
+    {
+        Home::getNotFound();
+    }
 }

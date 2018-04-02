@@ -14,12 +14,23 @@ use App\Models\dashboard\Post;
 
 class PostController extends Post
 {
+
+
     public static function ListAll()
     {
         if(!Auth::CheckSession()){
             Redirect::Redirect("/auth");
         }
-       Post::getPost();
+       parent::getPost();
+
+    }
+    public static function newPost()
+    {
+        if(!Auth::CheckSession()){
+            Redirect::Redirect("/auth");
+        }
+
+        parent::newPost();
 
     }
 
@@ -28,13 +39,13 @@ class PostController extends Post
         if(!Auth::CheckSession()){
             Redirect::Redirect("/auth");
         }
-        Post::addPost($Post);
+        parent::addPost($Post);
     }
 
     public static function editPost($id){
         if(!Auth::CheckSession()){
             Redirect::Redirect("/auth");
         }
-        Post::editPost($id);
+        parent::editPost($id);
     }
 }

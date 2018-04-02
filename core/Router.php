@@ -29,9 +29,15 @@ class Router {
             }
         }
         if (isset(self::$routes[$pattern])) {
-//            Redirect::Redirect("/404");
-            echo "rota não encontrada";
+            Redirect::Redirect("/404");
+
         }
+
+
+
+
+
+
 
     }
 }

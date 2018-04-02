@@ -27,9 +27,7 @@
                                 <input type="text" name="titulo" class="form-control form-white" placeholder="Titulo" minlength="5" required="" aria-required="true">
                             </div>
                             <h3>Conteudo <strong>Editor</strong></h3>
-                            <textarea name="text" id="editor1" rows="10" cols="80">
-
-                            </textarea>
+                            <textarea name="text" id="editor" rows="10" cols="80"></textarea>
                             <!-- -->
                                 <hr>
                             <!-- -->
@@ -92,6 +90,7 @@
 
                     </div>
 
+
                 </form>
             </div>
         </div>
@@ -99,44 +98,9 @@
 
 </div>
 
-<!-- BEGIN MODAL DATE & TIME PICKER -->
-<div class="modal fade" id="modal-timepicker" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icons-office-52"></i></button>
-                <h4 class="modal-title"><strong>Date &amp; Timepicker </strong> inside modal</h4>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="form-label">Time Picker</label>
-                            <div class="prepend-icon">
-                                <input type="text" name="timepicker" class="timepicker form-control" placeholder="Choose a time...">
-                                <i class="icon-clock"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="form-label">Data</label>
-                            <div class="prepend-icon">
-                                <input type="text" name="datetimepicker" class="datetimepicker form-control" placeholder="Insira a data">
-                                <i class="icon-clock"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer bg-gray-light">
-                <button type="button" class="btn btn-default btn-embossed" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary btn-embossed" data-dismiss="modal">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
 
+<!-- include summernote css/js -->
+<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
 
 <!-- END MODAL DATE & TIME PICKER -->
 

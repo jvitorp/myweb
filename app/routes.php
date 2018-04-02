@@ -13,13 +13,20 @@ use Core\Login;
 use Core\Request;
 use Core\Upload;
 use Core\Session;
-
+use App\Models\blog\Post;
+use Core\Helpers\Page;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
 Router::route('/*', function() {
     $controller = \Core\Controller::getController("HomeController");
     $controller->index();
 });
 
+Router::route('/404/*', function() {
+    $controller = \Core\Controller::getController("HomeController");
+    $controller->NotFound();
+});
 
 Router::route('/post/(\d+)(?:/([^/]+))?', function($id = "",$title = "") {
     $controller = \Core\Controller::getController("PostController");
@@ -33,7 +40,19 @@ Router::route('/query/*', function() {
     print_r($_SESSION);
 });
 
-
+Router::route('/ajax/auth*', function() {
+    $request = Request::getPost();
+    $login = new Login($request->username,$request->password);
+    if($login->setLogin())
+    {
+        $json = ['success' => 'Logado com sucesso'];
+    }
+    else{
+        $json = ['error' => 'E-mail ou senha incorretos'];
+    }
+    sleep(1);
+    echo json_encode($json);
+});
 
 //Router::route('^/dashboard(?:/([^/]+))?(?:/([^/]+))?', function($action = "Home",$args = "") {
 //    $controller = \Core\Controller::getAdminController("{$action}Controller");
@@ -52,11 +71,6 @@ Router::route('/dashboard/logout*', function() {
     $controller = \Core\Controller::getAdminController("HomeController");
     $controller->Logout();
 });
-
-Router::route('/dashboard/404*', function() {
-    echo "Pagina nao encontrada";
-});
-
 
 /*
  *
@@ -208,12 +222,53 @@ Router::route('/dashboard/ajax/category/*', function() {
 
     echo json_encode($json);
 });
-Router::route('/nav/*', function() {
+Router::route('/post/*', function() {
+    $controller = \Core\Controller::getController("PostController");
+    $controller->getRecent();
+});
 
+Router::route('/post/page/(\d+)*', function($pagina) {
+    $controller = \Core\Controller::getController("PostController");
+    $controller->getRecent($pagina);
+});
+Router::route('/mail/*', function() {
 
+    $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
+    try {
+        //Server settings
+        $mail->SMTPDebug = false;                                 // Enable verbose debug output
+        $mail->isSMTP();                                      // Set mailer to use SMTP
+        $mail->Host = 'smtp.umbler.com';  // Specify main and backup SMTP servers
+        $mail->SMTPAuth = true;                               // Enable SMTP authentication
+        $mail->Username = 'contato@joaovitorp.com';                 // SMTP username
+        $mail->Password = 'Jo@ovitor1';                           // SMTP password
+        $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+        $mail->Port = 587;                                    // TCP port to connect to
 
+        //Recipients
+        $mail->setFrom('contato@joaovitorp.com', 'E-mail TEST');
+        $mail->addAddress('jvpereirafaustino@gmail.com', 'Joe User');     // Add a recipient
+        $mail->addAddress('neconeditor@gmail.com');               // Name is optional
+        $mail->addAddress('neconeditor2@gmail.com');               // Name is optional
+        $mail->addReplyTo('contato@joaovitorp.com', 'Information');
+        $mail->addCC('cc@example.com');
+        $mail->addBCC('bcc@example.com');
 
+//        //Attachments
+//        $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+//        $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 
+        //Content
+        $mail->isHTML(true);                                  // Set email format to HTML
+        $mail->Subject = 'Here is the subject';
+        $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+        $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+        $mail->send();
+        echo 'Message has been sent';
+    } catch (Exception $e) {
+        echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+    }
 });
 Router::execute($_SERVER['REQUEST_URI']);
 

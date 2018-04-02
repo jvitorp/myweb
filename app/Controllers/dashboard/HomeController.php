@@ -11,6 +11,7 @@ namespace App\Controllers\dashboard;
 use App\Models\dashboard\Auth;
 use App\Models\dashboard\Home;
 use Core\Redirect;
+use Core\Security;
 
 class HomeController extends Home
 {
